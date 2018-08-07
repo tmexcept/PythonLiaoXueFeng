@@ -57,7 +57,7 @@ print(s.score)
 '''
 s.score = 999	
 '''
-
+# 注意到这个神奇的@property，我们在对实例属性操作的时候，就知道该属性很可能不是直接暴露的，而是通过getter和setter方法来实现的。
 # 还可以定义只读属性，只定义getter方法，不定义setter方法就是一个只读属性
 class Student(object):
 	@property
@@ -66,7 +66,7 @@ class Student(object):
 	@birth.setter
 	def birth(self, value):
 		self._birth = value
-	@properth
+	@property
 	def age(self):
 		return 2015 - self._birth
 
